@@ -1,0 +1,10 @@
+#!/bin/sh
+
+alias l='ls -la --color --group-directories-first'
+alias ..='cd ..'
+alias gst='git status'
+alias gpr='git pull -r'
+alias b='bat'
+alias srz='source ~/.config/zsh/.zshrc'
+alias idea='intellij-idea-ultimate-edition'
+alias k='kubectl'

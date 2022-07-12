@@ -1,0 +1,17 @@
+---
+
+- name: create fonts folder
+  ansible.builtin.file:
+    path: "{{ ansible_env.HOME }}/.local/share/fonts"
+    state: directory
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    mode: '0700'
+
+- name: copy fonts into fonts folder
+  ansible.builtin.copy:
+    src: files/fonts/NerdFonts
+    dest: "{{ ansible_env.HOME }}/.local/share/fonts/"
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    mode: '0644'

@@ -1,0 +1,28 @@
+---
+
+- name: create tmp dir
+  ansible.builtin.file:
+    path: ./tmp
+    state: directory
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    mode: '0700'
+
+- name: download sdkman install script
+  get_url:
+    url: https://get.sdkman.io
+    dest: ./tmp/sdkman-install.sh
+    mode: '0700'
+
+- name: check if sdkman is already installed
+  ansible.builtin.stat:
+    path: "{{ ansible_env.HOME }}/.sdkman/bin/sdkman-init.sh"
+  register: sdkman_init_file
+
+- name: execute sdkman install script
+  ansible.builtin.shell: ./sdkman-install.sh >> sdkman-install.log
+  args:
+    chdir: tmp/
+  environment:
+    SDKMAN_DIR: "{{ ansible_env.HOME }}/.sdkman"
+  when: not sdkman_init_file.stat.exists

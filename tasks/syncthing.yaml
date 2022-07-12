@@ -1,0 +1,17 @@
+---
+
+- name: symlink syncthing user unit
+  ansible.builtin.file:
+    dest: "{{ ansible_env.HOME }}/.config/systemd/user/syncthing.service"
+    src: "{{ ansible_env.PWD }}/files/syncthing/syncthing.service"
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    state: link
+  when: ansible_facts["env"]["PWD"] is match(".*/workstation$")  # not sure if that is the final solution
+
+- name: enable and start syncthing user unit
+  ansible.builtin.systemd:
+    state: started
+    enabled: yes
+    name: syncthing.service
+    scope: user

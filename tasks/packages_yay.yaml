@@ -1,0 +1,38 @@
+---
+
+- name: install packages with yay
+  become: true
+  yay: 
+    name:
+    - vim
+    - ripgrep
+    - code
+    - tig
+    - tree
+    - htop
+    - httpie
+    - syncthing
+    - bat
+    - fd
+    - snapd
+    - mattermost-desktop
+    - zsh
+    - zsh-completions
+    - zip
+    - docker
+    - docker-compose
+    - intellij-idea-ultimate-edition
+    - intellij-idea-ultimate-edition-jre
+    - keepassxc
+    - mons
+    - bluez
+    - bluez-utils
+    - bluedevil
+    - teams
+    - optimus-manager
+    - optimus-manager-qt-kde
+    - go
+    - icaclient
+    - cups
+    - kubectl
+    - minikube

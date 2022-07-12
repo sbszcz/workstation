@@ -1,0 +1,18 @@
+#!/bin/sh
+HISTFILE=~/.config/zsh/.histfile
+HISTSIZE=1000000
+SAVEHIST=1000000
+export PATH="$HOME/.local/bin":$PATH
+
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/sebastian/.sdkman"
+[[ -s "/home/sebastian/.sdkman/bin/sdkman-init.sh" ]] && source "/home/sebastian/.sdkman/bin/sdkman-init.sh"
+
+export JAVA_HOME="~/.sdkman/candidates/java/current"
+
+# disable fancy minikube emojis
+export MINIKUBE_IN_STYLE=0
+
+# make plasma respect the Qt settings
+# export PLASMA_USE_QT_SCALING=1

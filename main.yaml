@@ -1,0 +1,19 @@
+---
+- hosts: localhost
+  connection: local
+  vars:
+    username: sebastian
+    group: sebastian
+    dpdhl_ca_i5_cert: 'DPDHL Global TLS CA - I5'
+
+  tasks:
+  - include: tasks/packages_yay.yaml
+  - include: tasks/packages_snap.yaml
+  - include: tasks/syncthing.yaml
+  - include: tasks/client1-vpn.yaml
+  - include: tasks/zsh.yaml
+  - include: tasks/misc.yaml
+  - include: tasks/sdkman.yaml
+  - include: tasks/docker.yaml
+  - include: tasks/certs.yaml
+  - include: tasks/fonts.yaml

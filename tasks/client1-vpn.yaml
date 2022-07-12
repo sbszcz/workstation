@@ -1,0 +1,37 @@
+---
+- name: copy client1 vpn CA cert to destination
+  ansible.builtin.copy:
+    src: files/client1-vpn/ca-client1dev.crt.enc
+    dest: "{{ ansible_env.HOME }}/.local/share/networkmanagement/certificates/ca-client1dev.crt"
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    mode: '0600'
+  register: nm_ca_copy
+
+- name: copy client1 vpn private key
+  ansible.builtin.copy:
+    src: files/client1-vpn/ta-client1dev.key.enc
+    dest: "{{ ansible_env.HOME }}/.local/share/networkmanagement/certificates/ta-client1dev.key"
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    mode: '0600'
+  register: nm_private_key_copy
+
+- name: copy client1-vpn networkmanager config to destination
+  become: true
+  ansible.builtin.copy:
+    src: files/client1-vpn/client1-vpn.nmconnection.enc
+    dest: /etc/NetworkManager/system-connections/client1-vpn.nmconnection
+    owner: root
+    group: root
+    mode: '0600'
+  register: nm_config_file_copy
+
+- name: reload networkmanager if necessary
+  become: true
+  ansible.builtin.systemd:
+    state: restarted
+    daemon_reload: yes
+    name: NetworkManager.service
+    scope: system
+  when: nm_config_file_copy.changed or nm_private_key_copy.changed or nm_ca_copy.changed

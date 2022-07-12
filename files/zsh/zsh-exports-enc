@@ -1,0 +1,8 @@
+#!/bin/sh
+
+export BITBUCKET_URL='{{ bitbucket_url }}'
+export LDAP_USER='{{ ldap_user }}'
+export LDAP_PASS='{{ ldap_pass }}'
+
+export HARBOR_USER_Q='{{ harbor_user_q }}'
+export HARBOR_PASS_Q='{{ harbor_pass_q }}'

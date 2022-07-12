@@ -1,0 +1,35 @@
+---
+- name: symlink .xprofile
+  ansible.builtin.file:
+    dest: "{{ ansible_env.HOME }}/.xprofile"
+    src: "{{ ansible_env.PWD }}/files/x/xprofile"
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    state: link
+  when: ansible_facts["env"]["PWD"] is match(".*/workstation$")
+
+- name: symlink .vimrc
+  ansible.builtin.file:
+    dest: "{{ ansible_env.HOME }}/.vimrc"
+    src: "{{ ansible_env.PWD }}/files/vim/.vimrc"
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    state: link
+  when: ansible_facts["env"]["PWD"] is match(".*/workstation$")
+
+- name: enable and start bluetooth daemon
+  become: true
+  ansible.builtin.systemd:      
+    state: started
+    enabled: yes
+    name: bluetooth
+    scope: system
+
+- name: enable and start cups printing service
+  become: true
+  ansible.builtin.systemd:
+    state: started
+    enabled: yes
+    name: cups
+    scope: system
+

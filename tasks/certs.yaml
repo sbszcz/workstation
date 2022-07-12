@@ -1,0 +1,23 @@
+---
+- name: copy DPDHL ca cert to destination
+  become: true
+  ansible.builtin.copy:
+    src: files/certs/dpdhl_tls_i5_pem.crt
+    dest: /etc/ca-certificates/trust-source/anchors/
+    owner: root
+    group: root
+    mode: '0600'
+
+- name: grep trust list for DPDHL I5 CA cert
+  become: true
+  ansible.builtin.shell: "trust list | grep '{{ dpdhl_ca_i5_cert }}' | xargs"
+  register: trust_list
+  changed_when: false
+
+- debug:
+    var: trust_list.stdout
+
+- name: update ca certificates
+  become: true
+  ansible.builtin.shell: update-ca-trust extract
+  when: 'dpdhl_ca_i5_cert|string not in trust_list.stdout'

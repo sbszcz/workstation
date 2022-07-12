@@ -1,0 +1,17 @@
+---
+
+- name: enable and start docker daemon
+  become: true
+  ansible.builtin.systemd:
+    state: started
+    enabled: yes
+    name: docker.service
+    scope: system
+
+- name: set permissions for docker daemon
+  become: true
+  ansible.builtin.file:
+    path: /var/run/docker.sock
+    owner: root
+    group: docker
+    mode: 0666

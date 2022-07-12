@@ -27,3 +27,6 @@ fi
 
 export SDKMAN_DIR="/home/sebastian/.sdkman"
 [[ -s "/home/sebastian/.sdkman/bin/sdkman-init.sh" ]] && source "/home/sebastian/.sdkman/bin/sdkman-init.sh"
+
+eval "$(zoxide init zsh --cmd j)"
+

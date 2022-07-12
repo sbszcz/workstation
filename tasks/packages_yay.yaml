@@ -36,3 +36,4 @@
     - cups
     - kubectl
     - minikube
+    - zoxide

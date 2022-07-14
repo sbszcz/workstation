@@ -38,3 +38,5 @@
     - minikube
     - zoxide
     - noto-fonts-emoji
+    - kubeval
+    - net-tools

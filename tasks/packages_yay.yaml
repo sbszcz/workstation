@@ -40,3 +40,4 @@
     - noto-fonts-emoji
     - kubeval
     - net-tools
+    - expect

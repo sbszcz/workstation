@@ -8,3 +8,6 @@ alias b='bat'
 alias srz='source ~/.config/zsh/.zshrc'
 alias idea='intellij-idea-ultimate-edition'
 alias k='kubectl'
+alias mk='minikube'
+alias mkreset='~/workspace/personal/workstation/files/scripts/minikube-reset.sh'
+

@@ -41,3 +41,4 @@
     - kubeval
     - net-tools
     - expect
+    - helm

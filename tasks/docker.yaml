@@ -8,10 +8,9 @@
     name: docker.service
     scope: system
 
-- name: set permissions for docker daemon
+- name: add user to docker group
   become: true
-  ansible.builtin.file:
-    path: /var/run/docker.sock
-    owner: root
-    group: docker
-    mode: 0666
+  ansible.builtin.user:
+    name: "{{ username }}"
+    groups: docker
+    append: true

@@ -9,6 +9,7 @@
   tasks:
   - include: tasks/packages_yay.yaml
   - include: tasks/packages_snap.yaml
+  - include: tasks/packages_flatpak.yaml
   - include: tasks/syncthing.yaml
   - include: tasks/client1-vpn.yaml
   - include: tasks/zsh.yaml

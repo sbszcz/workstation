@@ -30,3 +30,8 @@ export SDKMAN_DIR="/home/sebastian/.sdkman"
 
 eval "$(zoxide init zsh --cmd j)"
 
+
+# key bindings 
+
+bindkey "^U" backward-kill-line
+

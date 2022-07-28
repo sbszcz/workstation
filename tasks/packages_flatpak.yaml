@@ -1,0 +1,6 @@
+---
+
+- name: install flatpak packages
+  community.general.flatpak:
+    name: 
+      - com.valvesoftware.Steam

@@ -50,3 +50,6 @@
     - gimp
     - step-cli
     - rust
+    - kcm-wacomtablet
+    - openboard
+    - skanlite

@@ -1,3 +1,4 @@
+
 ---
 
 - name: install packages with yay
@@ -54,3 +55,4 @@
     - openboard
     - skanlite
     - telepresence2
+    - azure-cli

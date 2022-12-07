@@ -1,3 +1,14 @@
+
+function knsset {
+    if type kubectl > /dev/null; then
+        kubectl config set-context --current --namespace=$1
+        kubectl config view --minify | grep namespace:
+    else
+        echo "kubectl not installed"
+    fi
+    
+}
+
 # Thanks chris@machine
 # https://github.com/Mach-OS/Machfiles
 

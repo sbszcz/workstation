@@ -5,10 +5,17 @@ alias ..='cd ..'
 alias b='bat'
 alias srz='source ~/.config/zsh/.zshrc'
 alias idea='intellij-idea-ultimate-edition'
-alias k='kubectl'
 alias mk='minikube'
 alias mkreset='~/workspace/personal/workstation/files/scripts/minikube-reset.sh'
 
 # git
 alias gpr='git pull -r'
 alias gst='git status'
+
+#kubectl
+
+alias k='kubectl'
+alias kpods='kubectl get pods -A'
+alias kns='kubectl config view --minify | grep namespace:'
+alias ksetns=''
+alias klogs='kubectl logs'

@@ -50,10 +50,10 @@
     - godot
     - gimp
     - step-cli
-    - rust
     - kcm-wacomtablet
     - openboard
     - skanlite
     - telepresence2
     - azure-cli
     - k9s
+    - rustup

@@ -57,3 +57,4 @@
     - azure-cli
     - k9s
     - rustup
+    - starship

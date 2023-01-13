@@ -30,6 +30,16 @@
     - zsh-exports
     - zsh-prompt
 
+- name: "symlink starship.toml"
+  ansible.builtin.file:
+    dest: "{{ ansible_env.HOME }}/.config/starship.toml"
+    src: "{{ ansible_env.PWD }}/files/starship/starship.toml"
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    state: link
+    mode: '0770'
+  when: ansible_facts["env"]["PWD"] is match(".*/workstation$")
+
 - name: copy export file with encrypted content
   become: true
   vars:

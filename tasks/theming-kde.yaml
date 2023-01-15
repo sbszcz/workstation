@@ -1,0 +1,10 @@
+
+---
+
+- name: install packages with yay related to theming kde
+  become: true
+  yay: 
+    name:
+    - kvantum
+    - papirus-icon-theme
+    - latte-dock

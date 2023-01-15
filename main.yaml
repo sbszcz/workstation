@@ -18,3 +18,4 @@
   - include: tasks/docker.yaml
   - include: tasks/certs.yaml
   - include: tasks/fonts.yaml
+  - include: tasks/theming-kde.yaml

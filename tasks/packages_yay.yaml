@@ -29,7 +29,6 @@
     - bluez
     - bluez-utils
     - bluedevil
-    - teams
     - optimus-manager
     - optimus-manager-qt-kde
     - go

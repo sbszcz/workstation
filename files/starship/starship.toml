@@ -61,7 +61,7 @@ truncation_length = 3
 truncate_to_repo = false
 
 [docker_context]
-symbol = "docker "
+symbol = " "
 
 [elixir]
 symbol = "exs "
@@ -73,7 +73,7 @@ symbol = "elm "
 symbol = " "
 
 [golang]
-symbol = "go "
+symbol = " "
 
 [guix_shell]
 symbol = "guix "
@@ -88,7 +88,7 @@ symbol = " "
 symbol = "jl "
 
 [kotlin]
-symbol = "kt "
+symbol = " "
 
 [lua]
 symbol = "lua "
@@ -97,7 +97,7 @@ symbol = "lua "
 symbol = "nodejs "
 
 [memory_usage]
-symbol = "memory "
+symbol = "󰍛 "
 
 [meson]
 symbol = "meson "
@@ -168,7 +168,7 @@ symbol = "pulumi "
 symbol = "purs "
 
 [python]
-symbol = "py "
+symbol = " "
 
 [raku]
 symbol = "raku "
@@ -177,10 +177,10 @@ symbol = "raku "
 symbol = "rb "
 
 [rust]
-symbol = "rs "
+symbol = " "
 
 [scala]
-symbol = "scala "
+symbol = " "
 
 [spack]
 symbol = "spack "

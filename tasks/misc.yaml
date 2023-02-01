@@ -17,6 +17,23 @@
     state: link
   when: ansible_facts["env"]["PWD"] is match(".*/workstation$")
 
+- name: create neovim config dir
+  ansible.builtin.file:
+    path:  "{{ ansible_env.HOME }}/.config/nvim"
+    state: directory
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    mode: '0700'
+
+- name: symlink neovim config
+  ansible.builtin.file:
+    dest: "{{ ansible_env.HOME }}/.config/nvim"
+    src: "{{ ansible_env.PWD }}/files/nvim"
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    state: link
+  when: ansible_facts["env"]["PWD"] is match(".*/workstation$")
+
 - name: enable and start bluetooth daemon
   become: true
   ansible.builtin.systemd:      

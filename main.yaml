@@ -7,7 +7,7 @@
     dpdhl_ca_i5_cert: 'DPDHL Global TLS CA - I5'
 
   tasks:
-  - include: tasks/packages_yay.yaml
+#  - include: tasks/packages_yay.yaml
   - include: tasks/packages_snap.yaml
   - include: tasks/packages_flatpak.yaml
   - include: tasks/syncthing.yaml

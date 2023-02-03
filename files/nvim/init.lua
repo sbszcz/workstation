@@ -40,6 +40,14 @@ require("lazy").setup({
   },
 
   {
+    "nvim-lualine/lualine.nvim",
+    dependencies = { 'kyazdani42/nvim-web-devicons' },
+    config = function()
+	    require("lualine").setup()
+    end
+  },
+
+  {
     "nvim-treesitter/nvim-treesitter", 
     build = ":TSUpdate",
     event = "BufReadPost",

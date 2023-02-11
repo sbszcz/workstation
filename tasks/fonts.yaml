@@ -8,10 +8,17 @@
     group: "{{ group }}"
     mode: '0700'
 
-- name: copy fonts into fonts folder
+- name: copy NerdFonts into fonts folder
   ansible.builtin.copy:
     src: files/fonts/NerdFonts
     dest: "{{ ansible_env.HOME }}/.local/share/fonts/"
     owner: "{{ username }}"
     group: "{{ group }}"
-    mode: '0644'
+
+- name: copy DHL-Delivery fonts into fonts folder
+  ansible.builtin.copy:
+    src: files/fonts/DHL-Delivery
+    dest: "{{ ansible_env.HOME }}/.local/share/fonts/"
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    mode: '0644'   mode: '0644'

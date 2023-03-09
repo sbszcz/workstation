@@ -1,9 +1,11 @@
 require("sbszcz.impatient")
 require("sbszcz.options")
-require("sbszcz.keymaps")
 require("sbszcz.plugins")
+require("sbszcz.keymaps")
 require("sbszcz.autocommands")
 require("sbszcz.colorscheme")
+require("sbszcz.telescope")
 require("sbszcz.treesitter")
-
-
+require("sbszcz.lsp")
+require("sbszcz.completion")
+require("sbszcz.lualine")

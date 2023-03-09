@@ -18,65 +18,31 @@ vim.opt.rtp:prepend(lazypath)
 --
 require("lazy").setup({
 
-  {
-     "williamboman/mason.nvim",
-     config = function()
-       require("mason").setup()
-     end
-  },
+  { 'folke/which-key.nvim', opts = {} },
 
-  {
-     "williamboman/mason-lspconfig.nvim",
-     config = function()
-       require("mason-lspconfig").setup {
-         ensure_installed = {
-           "sumneko_lua", -- Lua
-           "rust_analyzer", -- Rust
-           "gopls", -- Golang
-           "jsonls", -- Json
-           "taplo", -- TOML
-           "yamlls", -- YAML
-           "html", -- HTML
-         },
-       }
-     end
-  },
+  { "williamboman/mason.nvim" },
 
-  {
-    "neovim/nvim-lspconfig",
-    config = function()
+  { "williamboman/mason-lspconfig.nvim" },
 
-      require('lspconfig')['rust_analyzer'].setup {
+  { "neovim/nvim-lspconfig" },
 
-        -- on_attach = on_attach,
-        -- flags = lsp_flags,
-        -- Server-specific settings...
-        settings = {
-          ["rust-analyzer"] = {
-          }
-        },
-      }
+  { 'j-hui/fidget.nvim', opts = {} },
 
-      require('lspconfig')['sumneko_lua'].setup {
-        settings = {
-        }
-      }
+  { "hrsh7th/cmp-nvim-lsp", dependencies = { "hrsh7th/nvim-cmp" } },
+  { "hrsh7th/cmp-path", dependencies = { "hrsh7th/nvim-cmp" } },
+  { "hrsh7th/cmp-buffer", dependencies = { "hrsh7th/nvim-cmp" }  },
 
+  { "L3MON4D3/LuaSnip", version = "1.2.1" },
 
-    end
-  },
+  { "simrat39/rust-tools.nvim" },
 
   { "unblevable/quick-scope" },
 
   { "rmehri01/onenord.nvim" },
 
-  {
-    "nvim-lualine/lualine.nvim",
-    dependencies = { 'kyazdani42/nvim-web-devicons' },
-    config = function()
-	    require("lualine").setup()
-    end
-  },
+  { "nvim-lualine/lualine.nvim", dependencies = { 'kyazdani42/nvim-web-devicons' } },
+
+  { 'nvim-telescope/telescope.nvim', version = '*', dependencies = { 'nvim-lua/plenary.nvim' } },
 
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", event = "BufReadPost" }
 })

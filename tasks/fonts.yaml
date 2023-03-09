@@ -21,4 +21,4 @@
     dest: "{{ ansible_env.HOME }}/.local/share/fonts/"
     owner: "{{ username }}"
     group: "{{ group }}"
-    mode: '0644'   mode: '0644'
+    mode: '0644'

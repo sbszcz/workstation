@@ -17,13 +17,13 @@
     state: link
   when: ansible_facts["env"]["PWD"] is match(".*/workstation$")
 
-- name: create neovim config dir
-  ansible.builtin.file:
-    path:  "{{ ansible_env.HOME }}/.config/nvim"
-    state: directory
-    owner: "{{ username }}"
-    group: "{{ group }}"
-    mode: '0700'
+#- name: create neovim config dir
+#  ansible.builtin.file:
+#    path:  "{{ ansible_env.HOME }}/.config/nvim"
+#    state: directory
+#    owner: "{{ username }}"
+#    group: "{{ group }}"
+#    mode: '0700'
 
 - name: symlink neovim config
   ansible.builtin.file:

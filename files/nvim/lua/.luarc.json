@@ -1,0 +1,21 @@
+{
+    "workspace.library": [
+        "/home/sebastian/.config/nvim",
+        "/home/sebastian/.local/share/nvim/lazy/lazy.nvim",
+        "/home/sebastian/.local/share/nvim/lazy/nvim-treesitter",
+        "/home/sebastian/.local/share/nvim/lazy/quick-scope",
+        "/home/sebastian/.local/share/nvim/lazy/plenary.nvim",
+        "/home/sebastian/.local/share/nvim/lazy/onenord.nvim",
+        "/home/sebastian/.local/share/nvim/lazy/nvim-lspconfig",
+        "/home/sebastian/.local/share/nvim/lazy/mason.nvim",
+        "/home/sebastian/.local/share/nvim/lazy/telescope.nvim",
+        "/home/sebastian/.local/share/nvim/lazy/nvim-web-devicons",
+        "/home/sebastian/.local/share/nvim/lazy/lualine.nvim",
+        "/home/sebastian/.local/share/nvim/lazy/mason-lspconfig.nvim",
+        "/usr/share/nvim/runtime",
+        "/usr/share/nvim/runtime/pack/dist/opt/matchit",
+        "/usr/lib/nvim",
+        "/home/sebastian/.local/state/nvim/lazy/readme",
+        "${3rd}/luassert/library"
+    ]
+}

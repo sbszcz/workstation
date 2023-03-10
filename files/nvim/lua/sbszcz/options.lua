@@ -5,7 +5,7 @@ vim.g.maplocalleader = " " -- Set '<space>' as leader key
 vim.o.number = true -- Print line numbers
 vim.o.tabstop = 2  -- Number of spaces tabs count for
 vim.o.shiftwidth = 2 -- Size of an indent
-vim.o.relativenumber = true -- Relative line numbers
+vim.o.norelativenumber = true -- Relative line numbers
 vim.o.expandtab = true -- Use spaces instead of tabs
 vim.o.smartindent = true -- Automatically insert indents
 vim.o.tabstops = 2 -- Number of spaces tabs count for
@@ -30,3 +30,6 @@ vim.opt.shortmess = vim.opt.shortmess + "c"
 -- have a fixed column for the diagnostics to appear in
 -- this removes the jitter when warnings/errors flow in
 vim.wo.signcolumn = "yes"
+
+vim.opt.list = true
+vim.opt.listchars:append "eol:↴"

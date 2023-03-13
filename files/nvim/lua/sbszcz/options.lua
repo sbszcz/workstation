@@ -33,3 +33,6 @@ vim.wo.signcolumn = "yes"
 
 vim.opt.list = true
 vim.opt.listchars:append "eol:↴"
+
+-- Only show current mode in lualine
+vim.opt.showmode = false

@@ -3,7 +3,7 @@ HISTFILE=~/.config/zsh/.histfile
 HISTSIZE=1000000
 SAVEHIST=1000000
 
-export PATH="$HOME/.local/bin":"$HOME/.cargo/bin":"$HOME/.cache/yay/azure-cli/src/bin"$PATH
+export PATH="$HOME/.local/bin":"$HOME/.cargo/bin":"$HOME/.cache/yay/azure-cli/src/bin":"$HOME/go/bin":$PATH
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!

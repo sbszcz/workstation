@@ -8,4 +8,5 @@ export HARBOR_QHCR_URL='{{ harbor_qhcr_url }}'
 export HARBOR_USER_Q='{{ harbor_user_q }}'
 export HARBOR_PASS_Q='{{ harbor_pass_q }}'
 
-export SDB_ARTIFACTORY_PASS='{{ srv_sdb_artifactory }}'
+export ARTIFACTORY_USER='{{ artifactory_user }}'
+export ARTIFACTORY_TOKEN='{{ artifactory_token }}'

@@ -1,15 +1,13 @@
 ---
-
 - name: enable and start snapd daemon
   become: true
-  ansible.builtin.systemd:      
+  ansible.builtin.systemd:
     state: started
     enabled: yes
     name: snapd.socket
     scope: system
-
-- name: install snap packages
-  become: true
-  community.general.snap:
-    name:
-      - joplin-desktop
+#- name: install snap packages
+#  become: true
+#  community.general.snap:
+#    name:
+#     - joplin-desktop

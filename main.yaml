@@ -4,18 +4,18 @@
   vars:
     username: sebastian
     group: sebastian
-    dpdhl_ca_i5_cert: 'DPDHL Global TLS CA - I5'
+    dpdhl_ca_i5_cert: "DPDHL Global TLS CA - I5"
 
   tasks:
-#  - include: tasks/packages_yay.yaml
-  - include: tasks/packages_snap.yaml
-  - include: tasks/packages_flatpak.yaml
-  - include: tasks/syncthing.yaml
-  - include: tasks/client1-vpn.yaml
-  - include: tasks/zsh.yaml
-  - include: tasks/misc.yaml
-  - include: tasks/sdkman.yaml
-  - include: tasks/docker.yaml
-  - include: tasks/certs.yaml
-  - include: tasks/fonts.yaml
-  - include: tasks/theming-kde.yaml
+    #  - include: tasks/packages_yay.yaml
+    - include_tasks: tasks/packages_snap.yaml
+    - include_tasks: tasks/packages_flatpak.yaml
+    - include_tasks: tasks/syncthing.yaml
+    - include_tasks: tasks/client1-vpn.yaml
+    - include_tasks: tasks/zsh.yaml
+    - include_tasks: tasks/misc.yaml
+    - include_tasks: tasks/sdkman.yaml
+    - include_tasks: tasks/docker.yaml
+    - include_tasks: tasks/certs.yaml
+    - include_tasks: tasks/fonts.yaml
+    - include_tasks: tasks/theming-kde.yaml

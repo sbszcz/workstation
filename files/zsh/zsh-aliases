@@ -1,6 +1,9 @@
 #!/bin/sh
 
-alias l='ls -la --color --group-directories-first'
+alias tree='eza --tree'
+alias l='eza -lah --icons=always'
+alias ls='eza'
+#alias l='ls -la --color --group-directories-first'
 alias ..='cd ..'
 alias b='bat'
 alias c='cat'
@@ -9,7 +12,7 @@ alias srz='source ~/.config/zsh/.zshrc'
 alias idea='intellij-idea-ultimate-edition'
 alias mk='minikube'
 alias mkreset='~/workspace/personal/workstation/files/scripts/minikube-reset.sh'
-alias n='nvim'
+alias vim='nvim'
 
 # git
 alias gpr='git pull -r'

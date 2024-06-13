@@ -10,3 +10,6 @@ export HARBOR_PASS_Q='{{ harbor_pass_q }}'
 
 export ARTIFACTORY_USER='{{ artifactory_user }}'
 export ARTIFACTORY_TOKEN='{{ artifactory_token }}'
+
+export GITHUB_API_KEY='{{ github_api_key }}'
+export GITHUB_API_ENDPOINT='{{ github_api_endpoint }}'

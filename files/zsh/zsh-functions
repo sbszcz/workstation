@@ -11,6 +11,10 @@ function kconfigmapedit(){
     kubectl edit configmap $(kubectl get configmap --no-headers | fzf | awk '{print $1}') 
 }
 
+function kconset() {
+    kubectl config use-context $(kubectl config get-contexts | awk '{print $2}' | fzf)
+}
+
 
 # Thanks chris@machine
 # https://github.com/Mach-OS/Machfiles

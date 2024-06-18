@@ -19,11 +19,9 @@ alias gpr='git pull -r'
 alias gst='git status'
 
 #kubectl
-alias ki='kubectl cluster-info'
 alias k='kubectl'
-alias kpods='kubectl get pods -A'
-alias kns='kubectl config view --minify | grep namespace:'
-alias ksetns=''
-alias klogs='kubectl logs'
+alias kinfo='kubectl cluster-info'
+alias kpods='kubectl get pods'
+alias kns="kubectl config get-contexts"
 alias kcon='kubectl config get-contexts'
 alias kinfo='kubectl cluster-info'
